@@ -27,7 +27,7 @@ class GameScreen : AppCompatActivity() {
         val choice3BT: Button = findViewById(R.id.choice3BT)
         val choice4BT: Button = findViewById(R.id.choice4BT)
 
-        val story = Story(this) //instiating story class
+        val story = Story( binding, this) //instiating story class
 
         choice1BT.setOnClickListener{
             story.selectPosition(story.nextPosition1)

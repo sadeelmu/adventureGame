@@ -5,9 +5,8 @@ import android.view.View
 import android.widget.TextView
 import com.example.adventuregame.databinding.ActivityGameScreenBinding
 
-class Story(val gs: GameScreen) {
+class Story(private val binding: ActivityGameScreenBinding, val gs: GameScreen) {
     //class constructor
-    private lateinit var binding: ActivityGameScreenBinding
 
 
     var nextPosition1 = " "

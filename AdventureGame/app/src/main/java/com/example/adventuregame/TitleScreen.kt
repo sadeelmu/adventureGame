@@ -16,6 +16,8 @@ class TitleScreen : AppCompatActivity() {
 
             val Intent = Intent(this, GameScreen::class.java)
             startActivity(Intent)
+
+
         }
     }
 }
