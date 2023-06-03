@@ -31,7 +31,15 @@ class Story(private val binding: ActivityGameScreenBinding, val gs: GameScreen) 
             "goTitleScreen" -> gs.goTitleScreen()
             "attack" -> attack()
         }
-        dbHandler.addDecision(position)
+        if(position == "goTitleScreen"){
+           dbHandler.deleteAllDecisions()
+        }
+        else if (position == "sign"){
+            dbHandler.deleteLastDecision()
+        }
+        else {
+           dbHandler.addDecision(position)
+        }
     }
 
     fun showAllButtons(){
@@ -175,7 +183,7 @@ class Story(private val binding: ActivityGameScreenBinding, val gs: GameScreen) 
         binding.choice4BT.setVisibility(View.INVISIBLE)
 
         nextPosition1 = "goTitleScreen"
-
+        
     }
 
 }
