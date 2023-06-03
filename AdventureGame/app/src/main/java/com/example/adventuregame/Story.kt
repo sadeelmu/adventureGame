@@ -8,6 +8,8 @@ import com.example.adventuregame.databinding.ActivityGameScreenBinding
 class Story(private val binding: ActivityGameScreenBinding, val gs: GameScreen) {
     //class constructor
 
+    //adding an instance variable for the database handler
+    private val dbHandler: DatabaseHandler = DatabaseHandler(gs.applicationContext)
 
     var nextPosition1 = " "
     var nextPosition2 = " "
@@ -29,6 +31,7 @@ class Story(private val binding: ActivityGameScreenBinding, val gs: GameScreen) 
             "goTitleScreen" -> gs.goTitleScreen()
             "attack" -> attack()
         }
+        dbHandler.addDecision(position)
     }
 
     fun showAllButtons(){
