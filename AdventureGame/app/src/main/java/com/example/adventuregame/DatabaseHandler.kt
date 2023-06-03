@@ -33,4 +33,17 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         db.insert(TABLE_NAME, null, values)
         db.close()
     }
+    
+    fun deleteAllDecisions() {
+        val db = this.writableDatabase
+        db.delete(TABLE_NAME, null, null)
+        db.close()
+    }
+    
+    fun deleteLastDecision() {
+        val db = this.writableDatabase
+        val deleteQuery = "DELETE FROM $TABLE_NAME WHERE $COL_ID = (SELECT MAX($COL_ID) FROM $TABLE_NAME)"
+        db.execSQL(deleteQuery)
+        db.close()
+    }
 }
