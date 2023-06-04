@@ -170,7 +170,7 @@ class Story(private val binding: ActivityGameScreenBinding, val gs: GameScreen) 
             binding.choice3BT.setVisibility(View.INVISIBLE)
             binding.choice4BT.setVisibility(View.INVISIBLE)
 
-            nextPosition1 = "startingPosition"
+            nextPosition1 = "startingPoint"
         }
     }
 

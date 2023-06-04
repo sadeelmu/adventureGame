@@ -34,7 +34,7 @@
             android:layout_height="0dp"
 
             android:layout_margin="25dp"
-            android:layout_weight="6"
+            android:layout_weight="11"
             app:srcCompat="@drawable/dungeon_gate" />
 
         <Button
@@ -44,11 +44,29 @@
             android:layout_marginLeft="75dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="75dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:elevation="50dp"
-            android:text="Start"
+            android:text="Start the Game"
             android:textAlignment="center"
             android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/musicBT"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="75dp"
+            android:layout_weight="2"
+            android:checked="false"
+            android:elevation="50dp"
+            android:text="Play Music"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textOff="Turn Music On"
+            android:textOn="Turn Music Off"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -61,8 +79,8 @@
             android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="50dp"
-            android:layout_weight="1"
-            android:text="created by:"
+            android:layout_weight="2"
+            android:text="created by: Sadeel, Hazar, Zade"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
             android:textSize="20sp"
