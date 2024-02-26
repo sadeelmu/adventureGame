@@ -70,22 +70,6 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/createdTV"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="50dp"
-            android:layout_weight="2"
-            android:text="created by: Sadeel, Hazar, Zade"
-            android:textAlignment="viewStart"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

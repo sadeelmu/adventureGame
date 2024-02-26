@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import android.widget.ToggleButton
 
 class TitleScreen : AppCompatActivity() {
@@ -16,8 +17,8 @@ class TitleScreen : AppCompatActivity() {
 
         startBT.setOnClickListener{
 
-            val Intent = Intent(this, GameScreen::class.java)
-            startActivity(Intent)
+            val musicIntent = Intent(this, GameScreen::class.java)
+            startActivity(musicIntent)
 
         }
 
@@ -25,6 +26,7 @@ class TitleScreen : AppCompatActivity() {
         musicToggle.setOnCheckedChangeListener{buttonView, isChecked->
             if (isChecked){
                 startService(Intent(this, MusicService::class.java))
+                Toast.makeText(this, "start music", Toast.LENGTH_SHORT).show()
             } else{
                 stopService(Intent(this, MusicService::class.java))
             }
